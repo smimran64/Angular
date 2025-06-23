@@ -1,0 +1,26 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>city</th>
+            <th>state</th>
+            <th>Photo</th>
+            <th>Units</th>
+            <th>wifi</th>
+            <th>laundry</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let location of locations">
+            <td>{{location.id}}</td>
+            <td>{{location.name}}</td>
+            <td>{{location.city}}</td>
+            <td>{{location.state}}</td>
+            <td><img [src]="location.photo" alt="Location Photo" width="50"></td>
+            <td>{{location.units}}</td>
+            <td>{{location.wifi ? 'Yes' : 'No'}}</td>
+            <td>{{location.laundry ? 'Yes' : 'No'}}</td>
+        </tr>
+    </tbody>
+</table>
