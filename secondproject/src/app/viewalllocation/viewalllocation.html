@@ -1,0 +1,29 @@
+<table>
+    <tr *ngFor="let l of locations | async">
+        <td>
+            {{l.id}}
+        </td>
+        <td>
+            {{l.name}}
+        </td>
+        <td>
+            {{l.city}}
+        </td>
+        <td>
+            {{l.state}}
+        </td>
+        <td>
+            {{l.photo}}
+        </td>
+        <td>
+            {{l.availableUnits}}
+        </td>
+        <td>
+            {{l.wifi}}
+        </td>
+        <td>
+            {{l.laundry}}
+        </td>
+    </tr>
+
+</table>

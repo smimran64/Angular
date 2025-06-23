@@ -5,15 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LocationService {
-  
+export class Location {
   baseUrl: string = "http://localhost:3000/locations";
 
   constructor(private http: HttpClient) { }
 
-  getAllLocation():Observable<any> {
-
+  getAllLocation(): Observable<any>{
+    
     return this.http.get(this.baseUrl);
-
   }
 }

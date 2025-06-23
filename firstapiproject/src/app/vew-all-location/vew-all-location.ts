@@ -13,14 +13,16 @@ export class VewAllLocation implements OnInit {
   locations: any;
 
   constructor(private locationsevice:LocationService) { }
+
   ngOnInit(): void {
+
     this.loadAllLocation();
    
   }
 
   loadAllLocation(){
 
-    this.locations = this.locationsevice.getAllLocation();
+    this.locations = this.locationsevice.getAllLocation(); 
   }
 
 }

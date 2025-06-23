@@ -12,15 +12,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let location of locations">
-            <td>{{location.id}}</td>
-            <td>{{location.name}}</td>
-            <td>{{location.city}}</td>
-            <td>{{location.state}}</td>
-            <td><img [src]="location.photo" alt="Location Photo" width="50"></td>
-            <td>{{location.units}}</td>
-            <td>{{location.wifi ? 'Yes' : 'No'}}</td>
-            <td>{{location.laundry ? 'Yes' : 'No'}}</td>
+        <tr *ngFor="let l of locations | async">
+            <td>{{l.id}}</td>
+            <td>{{l.name}}</td>
+            <td>{{l.city}}</td>
+            <td>{{l.state}}</td>
+           
+            <td>{{l.units}}</td>
+            <td>{{l.wifi}}</td>
+            <td>{{l.laundry}}</td>
         </tr>
     </tbody>
 </table>
