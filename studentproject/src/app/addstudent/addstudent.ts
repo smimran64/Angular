@@ -38,7 +38,7 @@ export class Addstudent implements OnInit {
 
         console.log("Student added successfully", res);
         this.formGroup.reset(); 
-        this.router.navigate(['allstu']);
+        this.router.navigate(['']);
 
       },
       error: (error) => {
