@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="my-2 text-center">All Student</h1>
+    <h1 class="my-2 text-center" style="color: rgb(129, 30, 210);">All Student</h1>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -20,7 +20,7 @@
                 <td>{{s.email}}</td>
                 <td>{{s.fee}}</td>
                 <td>
-                    <button class="btn btn-warning m-1 p-1">Edit</button>
+                    <button class="btn btn-warning m-1 p-1" (click)="getStudentById(s.id)">Edit</button>
                     <button class="btn btn-danger m-1 p-1" (click)=" deleteStudent(s.id)">Delete</button>
 
                 </td>

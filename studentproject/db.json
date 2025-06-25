@@ -34,13 +34,19 @@
       "id": "e7e2",
       "name": "Eiasin Prodhan",
       "email": "eiasin@gmail.com",
-      "fee": "50000"
+      "fee": "80000"
     },
     {
       "id": "c1de",
       "name": "Faruque Ahmed",
       "email": "faruque@gmail.com",
       "fee": "18000"
+    },
+    {
+      "id": "72e7",
+      "name": "CM Rejaul Karim",
+      "email": "cmrejaulkarim@gmail.com",
+      "fee": "200000"
     }
   ]
 }

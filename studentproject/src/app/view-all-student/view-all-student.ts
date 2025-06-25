@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-student',
@@ -11,7 +12,11 @@ export class ViewAllStudent implements OnInit {
 
   students: any;
 
-  constructor(private studentService: StudentService, private cdr: ChangeDetectorRef) { }
+  constructor(
+    private studentService: StudentService,
+    private cdr: ChangeDetectorRef,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
 
@@ -46,6 +51,31 @@ export class ViewAllStudent implements OnInit {
 
   }
 
+  getStudentById(id: string): void {
 
-  
+    this.studentService.getStudentById(id).subscribe({
+
+
+      next: (res) => {
+
+        console.log(res)
+        console.log("Data get Successfully");
+        this.router.navigate(['/updatestudent', id]);
+
+      },
+
+      error: (err) => {
+
+        console.log(err);
+
+
+      }
+
+
+    })
+
+
+
+  }
+
 }
