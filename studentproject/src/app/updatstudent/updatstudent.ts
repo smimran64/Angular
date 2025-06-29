@@ -9,19 +9,19 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './updatstudent.html',
   styleUrl: './updatstudent.css'
 })
-export class Updatstudent implements OnInit{
+export class Updatstudent implements OnInit {
 
 
-  id:string = '';
-  student : Student = new Student();
+  id: string = '';
+  student: Student = new Student();
 
   constructor(
-    private studentService:StudentService,
-    private router : Router,
-    private route : ActivatedRoute,
-    private cdr : ChangeDetectorRef
+    private studentService: StudentService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private cdr: ChangeDetectorRef
 
-  ){}
+  ) { }
 
   ngOnInit(): void {
 
@@ -29,41 +29,40 @@ export class Updatstudent implements OnInit{
   }
 
 
-  loadStudentById(){
+  loadStudentById() {
 
     this.id = this.route.snapshot.params['id'];
     this.studentService.getStudentById(this.id).subscribe({
 
-      next : (res) => {
+      next: (res) => {
 
         this.student = res;
         this.cdr.markForCheck();
       },
-      error : (err) =>{
+      error: (err) => {
 
-        console.log("Error fetching student:",err);
+        console.log("Error fetching student:", err);
       }
 
 
     });
-
-
   }
 
-  updateStudent(): void{
 
-    this.studentService.updateStudent(this.id,this.student).subscribe({
+  updateStudent(): void {
 
-      next : (res) => {
+    this.studentService.updateStudent(this.id, this.student).subscribe({
+
+      next: (res) => {
 
         this.router.navigate([''], res)
 
 
       },
 
-      error : (err) => {
+      error: (err) => {
 
-        console.log('update failed',err);
+        console.log('update failed', err);
 
       }
     });

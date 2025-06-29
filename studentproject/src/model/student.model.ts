@@ -1,8 +1,14 @@
 export class Student {
 
-id!: number;
+id!: string;
 name!: string;
 email!: string;
 fee!: number;
+
+location!:{
+
+    id: string;
+    name: string;
+}
 
 }
