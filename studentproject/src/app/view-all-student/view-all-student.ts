@@ -3,6 +3,7 @@ import { StudentService } from '../service/student.service';
 import { Router } from '@angular/router';
 import { LocationService } from '../service/location.service';
 import { forkJoin } from 'rxjs';
+import { Student } from '../../model/student.model';
 
 @Component({
   selector: 'app-view-all-student',
@@ -12,8 +13,8 @@ import { forkJoin } from 'rxjs';
 })
 export class ViewAllStudent implements OnInit {
 
-  students: any;
-  locations: any;
+  students : Student[]= [];
+  locations: Location[]=[];
 
   constructor(
     private studentService: StudentService,
@@ -30,11 +31,27 @@ export class ViewAllStudent implements OnInit {
 
 
 
-  loadLocation() {
+  // loadLocation() {
 
-    this.locations = this.locationService.getAllLocation();
+  //  this.locationService.getAllLocation().subscribe({
 
-  }
+  //   next:(res)=>{
+
+  //     this.locations= res;
+
+
+  //   },
+  //   error: (err)=>{
+
+
+  //     console.log("location error",);
+
+  //   }
+
+
+  //  })
+
+  // }
 
   loadData(): void {
     forkJoin({
@@ -52,11 +69,11 @@ export class ViewAllStudent implements OnInit {
       }
     });
   }
-  loadAllStudent() {
+  // loadAllStudent() {
 
-    this.students = this.studentService.getAllStudent();
+  //   this.students = this.studentService.getAllStudent();
 
-  }
+  // }
 
 
   deleteStudent(id: string): void {
@@ -65,7 +82,7 @@ export class ViewAllStudent implements OnInit {
       next: () => {
 
         this.cdr.reattach();
-        this.loadAllStudent();
+        this.loadData();
 
       },
 

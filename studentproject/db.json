@@ -51,6 +51,18 @@
       "name": "CM Rejaul Karim",
       "email": "cmrejaulkarim@gmail.com",
       "fee": "200000"
+    },
+    {
+      "id": "6cfa",
+      "name": "Atik",
+      "email": "atik@gmail.com",
+      "fee": "25000"
+    },
+    {
+      "id": "cc8f",
+      "name": "Parvez Hossain",
+      "email": "parvez@gmail.com",
+      "fee": "20000"
     }
   ],
   "location": [

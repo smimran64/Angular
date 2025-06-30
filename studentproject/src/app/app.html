@@ -1,35 +1,49 @@
-
-   <!-- header start -->
+<!-- header start -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand " style="color: rgb(236, 240, 7);" href="">
-      <h4 class="ps-5"><i class="fa fa-home"></i> All Student </h4>
+      <h6 class="ps-3"><i class="fa fa-home"></i> All Student </h6>
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" style="color: rgb(236, 240, 7);" href="allstu">
-            <h4 class="ps-5">Add Student Form</h4>
+            <h6 class="ps-3">Add Student Form</h6>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" style="color: rgb(236, 240, 7);" href="viewalllocation">
-            <h4 class="ps-5">All Location</h4>
+            <h6 class="ps-3">All Location</h6>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#" tabindex="-1" style="color: rgb(236, 240, 7);">
-            <h4 class="ps-5">Contact</h4>
+            <h6 class="ps-3">Contact</h6>
           </a>
         </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+          style="color:rgb(226, 211, 5);">
+          <h6>Dropdown</h6>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/addlocation">AddLocation</a></li>
+          <li><a class="dropdown-item" href="/viewalllocation">All Location</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Search</button>
-      </form>
     </div>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-warning" type="submit">Search</button>
+    </form>
   </div>
+
 </nav>
 <div class="bg-primary border-rounded-0 text-center">
   <div class="row">
@@ -39,9 +53,9 @@
   </div>
 </div>
 <!-- header end -->
-   
-    <router-outlet />
-    <!-- footer start -->
+
+<router-outlet />
+<!-- footer start -->
 
 <footer class="bd-footer py-5 mt-5 " style="background-color: rgb(229, 238, 198);">
   <div class="container py-5">
@@ -112,6 +126,3 @@
     </div>
   </div>
 </footer>
-   
-
-
