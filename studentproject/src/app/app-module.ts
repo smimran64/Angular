@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Updatstudent } from './updatstudent/updatstudent';
 import { ViewAllLocation } from './view.all.location/view.all.location';
 import { UpdateLocation } from './update-location/update-location';
+import { AddLocation } from './add-location/add-location';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UpdateLocation } from './update-location/update-location';
           Addstudent,
           Updatstudent,
           ViewAllLocation,
-          UpdateLocation
+          UpdateLocation,
+          AddLocation
   ],
   imports: [
     BrowserModule,

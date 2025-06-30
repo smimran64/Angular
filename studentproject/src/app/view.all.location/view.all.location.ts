@@ -33,4 +33,48 @@ export class ViewAllLocation implements OnInit {
     this.locations = this.locationService.getAllLocation();
   }
 
+  deleteLocation(id:string): void {
+
+    this.locationService.deleteLocation(id).subscribe({
+
+      next: ()=>{
+
+        console.log("Location deleted successfully");
+
+        this.loadLocation();
+        this.cdr.reattach();
+
+      },
+
+      error:(err)=>{
+
+        console.log("Error deleting location", err);
+      }
+    });
+
+
+
+  }
+
+  getLocationById(id: string): void {
+
+    this.locationService.getLocationById(id).subscribe({
+
+      next: (res) => {
+
+        console.log(res);
+        console.log("Location found");
+        this.router.navigate(['/updatelocation', id]);
+
+      },
+      error: (err) => {
+
+        console.log("Error fetching location", err);
+
+      }
+
+      
+    });
+  }
+
 }

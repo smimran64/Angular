@@ -32,45 +32,31 @@ export class Addstudent implements OnInit {
 
       name: [''],
       email: [''],
-      fee: [''],
-      location: this.formBuilder.group({
+      fee: [''],      
 
-        name: ['']
-
-
-      })
-
-    });
-
-    this.loadLocation();
-    this.formGroup.get('location')?.get('name')?.valueChanges.subscribe( name => {
-
-
-      const selectedLocation = this.locations.find(loc=>loc. === name)
-
-    })
+    });    
 
   }
 
-  loadLocation(): void {
+  // loadLocation(): void {
 
-    this.locationService.getAllLocation().subscribe({
+  //   this.locationService.getAllLocation().subscribe({
 
-      next: (loc) => {
+  //     next: (loc) => {
 
-        this.locations = loc;
+  //       this.locations = loc;
 
-      },
-      error: (err) => {
+  //     },
+  //     error: (err) => {
 
-        console.log(err);
-      }
-
-
-    });
+  //       console.log(err);
+  //     }
 
 
-  }
+  //   });
+
+
+  // }
 
   addStudent(): void {
     const student: Student = { ...this.formGroup.value };

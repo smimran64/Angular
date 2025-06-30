@@ -28,7 +28,11 @@
       "id": "0be5",
       "name": "Imran",
       "email": "mdimranmia0172@gmail.com",
-      "fee": "15000"
+      "fee": "15000",
+      "location": {
+        "id": "1",
+        "name": "Dhaka"
+      }
     },
     {
       "id": "e7e2",
@@ -47,6 +51,12 @@
       "name": "CM Rejaul Karim",
       "email": "cmrejaulkarim@gmail.com",
       "fee": "200000"
+    }
+  ],
+  "location": [
+    {
+      "id": "1",
+      "name": "Dhaka"
     }
   ]
 }
