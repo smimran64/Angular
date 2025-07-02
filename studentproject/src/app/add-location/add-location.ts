@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LocationService } from '../service/location.service';
 import { Router } from '@angular/router';
+import { Location } from '../../model/location.model';
 
 @Component({
   selector: 'app-add-location',

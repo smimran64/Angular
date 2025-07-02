@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LocationService } from '../service/location.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '../../model/location.model';
 
 @Component({
   selector: 'app-update-location',
@@ -11,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UpdateLocation implements OnInit {
 
   id: string ='';
-  l:Location = new Location();
+  l:Location = new Location ();
   
 constructor(
 
@@ -43,7 +44,7 @@ constructor(
     });
   }
   updateLocation(): void {
-    this.locationService.updateLocation(this.id, this.l).subscribe({
+    this.locationService.updateLocation(this.id,this.l).subscribe({
 
       next: (res)=> this.router.navigate(['/viewalllocation']),
       error: (err)=> console.log("Error updating location", err)
