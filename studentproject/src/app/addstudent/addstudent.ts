@@ -38,25 +38,7 @@ export class Addstudent implements OnInit {
 
   }
 
-  // loadLocation(): void {
-
-  //   this.locationService.getAllLocation().subscribe({
-
-  //     next: (loc) => {
-
-  //       this.locations = loc;
-
-  //     },
-  //     error: (err) => {
-
-  //       console.log(err);
-  //     }
-
-
-  //   });
-
-
-  // }
+  
 
   addStudent(): void {
     const student: Student = { ...this.formGroup.value };

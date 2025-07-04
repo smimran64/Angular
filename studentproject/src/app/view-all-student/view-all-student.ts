@@ -31,27 +31,7 @@ export class ViewAllStudent implements OnInit {
 
 
 
-  // loadLocation() {
-
-  //  this.locationService.getAllLocation().subscribe({
-
-  //   next:(res)=>{
-
-  //     this.locations= res;
-
-
-  //   },
-  //   error: (err)=>{
-
-
-  //     console.log("location error",);
-
-  //   }
-
-
-  //  })
-
-  // }
+ 
 
   loadData(): void {
     forkJoin({
@@ -69,11 +49,7 @@ export class ViewAllStudent implements OnInit {
       }
     });
   }
-  // loadAllStudent() {
-
-  //   this.students = this.studentService.getAllStudent();
-
-  // }
+  
 
 
   deleteStudent(id: string): void {
@@ -83,6 +59,7 @@ export class ViewAllStudent implements OnInit {
 
         this.cdr.reattach();
         this.loadData();
+        this.cdr.markForCheck();
 
       },
 
