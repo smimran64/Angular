@@ -20,12 +20,14 @@ export class LocationService {
 
   }
 
+
   saveLocation(l : Location): Observable<any>{
 
 
     return this.http.post(this.baseUrl,l);
 
   }
+
 
   deleteLocation(id :string):Observable<any>{
 
@@ -34,6 +36,7 @@ export class LocationService {
 
   }
 
+
   getLocationById(id :string):Observable<any>{
 
 
@@ -41,11 +44,11 @@ export class LocationService {
 
   }
 
+
+
   updateLocation(id:string,l:Location):Observable<any>{
 
     return this.http.put(this.baseUrl+'/'+id,l);
-
-
    
   }
 

@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LocationService } from '../service/location.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '../../model/location.model';
+import { StudentService } from '../service/student.service';
 
 @Component({
   selector: 'app-update-location',
@@ -15,7 +16,7 @@ export class UpdateLocation implements OnInit {
   l:Location = new Location ();
   
 constructor(
-
+  private studentService: StudentService,
   private locationService: LocationService,
   private router: Router,
   private route: ActivatedRoute,
@@ -26,7 +27,9 @@ constructor(
 
   ngOnInit(): void {
     this.loadLocationById();
+    
   }
+
 
   loadLocationById(): void {
 
@@ -43,6 +46,8 @@ constructor(
       }
     });
   }
+
+
   updateLocation(): void {
     this.locationService.updateLocation(this.id,this.l).subscribe({
 

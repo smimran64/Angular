@@ -42,6 +42,7 @@ export class ViewAllStudent implements OnInit {
 
         this.locations = locations;
         this.students = students;
+        this.cdr.markForCheck();
       },
       error: (err) => {
 

@@ -26,7 +26,18 @@
                     [(ngModel)]="student.fee">
             </div>
 
+            <div class="col-md-6">
+                <label for="location" class="form-label">Location</label>
+                <select id="location" name="location" class="form-select" [(ngModel)]="student.location"
+                    [compareWith]="compareLocation">
+                    <option *ngFor="let loc of locations" [ngValue]="loc">{{ loc.name }}</option>
+                </select>
+            </div>
         </div>
+
+
+
+
 
         <div class="row mt-3 text-center">
             <div class="col-md-6">
