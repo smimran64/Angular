@@ -13,7 +13,7 @@ import { ViewAllLocation } from './view.all.location/view.all.location';
 import { UpdateLocation } from './update-location/update-location';
 import { AddLocation } from './add-location/add-location';
 import { Registration } from './auth/registration/registration';
-import { Loin } from './auth/loin/loin';
+import { Login } from './auth/login/login';
 import { Userprofile } from './auth/userprofile/userprofile';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { Userprofile } from './auth/userprofile/userprofile';
           UpdateLocation,
           AddLocation,
           Registration,
-          Loin,
+          Login,
           Userprofile
   ],
   imports: [

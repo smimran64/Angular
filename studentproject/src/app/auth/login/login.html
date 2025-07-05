@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background-size: cover;
+            /* Ensures responsiveness */
+            background-attachment: fixed;
+            /* Keeps background fixed while content scrolls */
+            overflow: hidden;
+        }
+
+        .login-box {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .login-box h2 {
+            margin: 0 0 1.5rem;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        .login-box label {
+            display: block;
+            text-align: left;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 4px;
+            background: #ff6f61;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #e65b50;
+        }
+
+        .login-box .options {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+            color: #ccc;
+        }
+
+        .login-box .options a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        .login-box .options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign In</button>
+            <div class="options">
+                <label><input type="checkbox" name="remember"> Remember Me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+        <div style="margin-top: 1rem;">Don't have an account? <a href="#" style="color: #ff6f61;">Sign up</a></div>
+    </div>
+</body>
+
+</html>
