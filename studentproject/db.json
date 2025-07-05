@@ -22,5 +22,29 @@
       "id": "a49a",
       "name": "Barishal"
     }
+  ],
+  "user": [
+    {},
+    {
+      "id": "0b5c",
+      "name": "Abdullah Al Masud",
+      "email": "masud1234@gmail.com",
+      "password": "1234",
+      "photo": "https://tinyurl.com/46muxjmx"
+    },
+    {
+      "id": "5387",
+      "name": "Abdullah Al Masud",
+      "email": "masud1234@gmail.com",
+      "password": "1234",
+      "photo": "https://tinyurl.com/46muxjmx"
+    },
+    {
+      "id": "e381",
+      "name": "Abdullah Al Masud",
+      "email": "masud1234@gmail.com",
+      "password": "1234",
+      "photo": "https://tinyurl.com/46muxjmx"
+    }
   ]
 }
